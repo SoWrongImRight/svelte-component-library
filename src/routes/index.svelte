@@ -1,6 +1,7 @@
 <script>
 	import Toggle from '$lib/Toggle.svelte';
 	import Accordion from '$lib/Accordion.svelte';
+	import BetterAccordion from '$lib/BetterAccordion.svelte';
 
 	let isToggled = false;
 </script>
@@ -8,11 +9,20 @@
 <h1>Welcome to SvelteKit</h1>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 
-<Accordion isOpen={true} buttonText="Do I need a thing?">
+<BetterAccordion isOpen={true} buttonText="Question">
+	<div>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, perspiciatis blanditiis ipsum
+			voluptatem excepturi modi quo natus labore error eveniet?
+		</p>
+	</div>
+</BetterAccordion>
+
+<!-- <Accordion isOpen={true} buttonText="Do I need a thing?">
 	<div>
 		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, animi?</p>
 	</div>
-</Accordion>
+</Accordion> -->
 
 <Toggle bind:isToggled label="beta" />
 <Toggle bind:isToggled label="beta" style="--toggleBackgroundColor: red;" />

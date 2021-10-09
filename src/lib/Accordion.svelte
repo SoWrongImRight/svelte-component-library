@@ -7,9 +7,7 @@
 </script>
 
 <div>
-	<button on:click={() => (isOpen = !isOpen)}>
-		{buttonText}
-	</button>
+	<button on:click={() => (isOpen = !isOpen)}>{buttonText}</button>
 	{#if isOpen}
 		<div transition:slide>
 			<slot />
