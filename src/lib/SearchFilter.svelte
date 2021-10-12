@@ -1,12 +1,20 @@
 <script>
   export let items;
+  let search = '';
+
+  $: filteredSearch = items.filter((item) => {
+    return search === "" || item.toLowerCase().indexOf(search.toLowerCase()) !== -1;
+
+  } )
 </script>
 
-
-<input type="text">
+<label>
+  Search Items: <br />
+  <input bind:value={search} type="text" placeholder="Search">
+</label>
 
 <ul>
-  {#each items as item}
+  {#each filteredSearch as item}
     <li>{item}</li>
   {/each}
 </ul>

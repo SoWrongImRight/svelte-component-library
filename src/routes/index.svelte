@@ -2,12 +2,25 @@
 	import Toggle from '$lib/Toggle.svelte';
 	import Accordion from '$lib/Accordion.svelte';
 	import BetterAccordion from '$lib/BetterAccordion.svelte';
+	import SearchFilter from '$lib/SearchFilter.svelte';
 
 	let isToggled = false;
+
+	let items = [
+		"red",
+		"blue",
+		"orange",
+		"yellow",
+		"green",
+		"brown",
+		"black",
+		"white"
+	]
 </script>
 
 <h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+
+<SearchFilter {items} />
 
 <!-- <BetterAccordion isOpen={true} buttonText="Question">
 	<div>
@@ -32,4 +45,3 @@
 {/if}
  -->
 
- 
