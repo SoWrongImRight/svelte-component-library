@@ -3,8 +3,11 @@
 	import Accordion from '$lib/Accordion.svelte';
 	import BetterAccordion from '$lib/BetterAccordion.svelte';
 	import SearchFilter from '$lib/SearchFilter.svelte';
+	import Field from '$lib/Field.svelte';
 
 	let isToggled = false;
+
+	let search = ""
 
 	let items = [
 		"red",
@@ -20,7 +23,10 @@
 
 <h1>Welcome to SvelteKit</h1>
 
-<SearchFilter {items} />
+<Field bind:value={search} label="Search" instructions="Type to search" placeholder="Color"/>
+<Field value=0 label="Number" type="number" />
+
+<SearchFilter {items} bind:search />
 
 <!-- <BetterAccordion isOpen={true} buttonText="Question">
 	<div>
