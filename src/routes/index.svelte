@@ -4,11 +4,8 @@
 	import BetterAccordion from '$lib/BetterAccordion.svelte';
 	import SearchFilter from '$lib/SearchFilter.svelte';
 	import Field from '$lib/Field.svelte';
-
 	let isToggled = false;
-
 	let search = ""
-
 	let items = [
 		"red",
 		"blue",
@@ -45,9 +42,7 @@
 
 <!-- <Toggle bind:isToggled label="beta" />
 <Toggle bind:isToggled label="beta" style="--toggleBackgroundColor: red;" />
-
 {#if isToggled}
 	<h1>Hi, I'm toggled</h1>
 {/if}
  -->
-

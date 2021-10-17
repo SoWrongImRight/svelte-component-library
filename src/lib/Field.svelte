@@ -5,7 +5,6 @@
   export let value
   export let placeholder
   export let type = "text"
-
   function handleInput(e) {
     value = type.match(/^(number|range)$/) ? + e.target.value : e.target.value
   }
